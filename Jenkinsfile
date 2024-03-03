@@ -24,9 +24,9 @@ pipeline {
                     // Run SonarQube analysis
                     withSonarQubeEnv('MySonarQubeServer') {
                         sh """
-                            ${tool 'SonarQube Scanner'}/bin/sonar-scanner \
-                            -Dsonar.projectKey=your-project-key \
-                            -Dsonar.sources=src
+                            ${tool 'sonarscanner'}/bin/sonar-scanner \
+                            -Dsonar.projectKey=Petclinic-Java \
+                            -Dsonar.sources=main
                         """
                     }
                 }
